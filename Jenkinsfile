@@ -4,6 +4,7 @@ pipeline {
     tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "Maven3"
+        //fuck
     }
     environment {
         S3_BUCKET_NAME = sh "date '+%Y%m%d%H%M'.zip"
