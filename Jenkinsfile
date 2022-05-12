@@ -15,10 +15,10 @@ pipeline {
 
         stage('prepare') {
             steps {
-                echo '${GIT_BRANCH}'
+                echo '$GIT_BRANCH'
                  sh 'rm -rf deploy'
                  echo 'prepare'
-                 git branch: "${GIT_BRANCH}", credentialsId: "GIT_ACCOUNT", url: 'https://github.com/zombie828/targetB'
+                 git branch: "$GIT_BRANCH", credentialsId: "GIT_ACCOUNT", url: 'https://github.com/zombie828/targetB'
                  sh  'ls -al'
             }
         }
